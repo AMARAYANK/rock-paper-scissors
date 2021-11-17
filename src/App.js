@@ -1,25 +1,50 @@
-import logo from './logo.svg';
+import React from 'react';
+import Rock from './icons/Rock';
+import Paper from './icons/Paper';
+import Scissors from './icons/Scissors';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className='app'>
+      <div className='info'>
+         <h2>Rock. Paper. Scissors</h2>
+         <div className='wins-losses'>
+           <div className='wins'>
+             <span className='number'>0</span>
+             <span className='text'>Wins</span>
+           </div>
 
-export default App;
+           <div className='losses'>
+             <span className='number'>0</span>
+             <span className='text'>Losses</span>
+           </div>
+         </div>
+      </div>
+
+     <div className='choices'>
+       <div>You</div>
+       <div />
+       <div>Computer</div>
+
+       <div>
+         <button className='rock'>
+           <Rock />
+         </button>
+         <button className='paper'>
+           <Paper />
+         </button>
+         <button className='scissors'>
+           <Scissors/>
+         </button>
+       </div>
+
+       <div className='vs'>vs</div>
+
+       <div>
+         <button className='computer-choice'>?</button>
+       </div>
+     </div>
+    </div>
+  )
+}
